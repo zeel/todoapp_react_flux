@@ -1,88 +1,103 @@
 #todo-app {
-  /*using fixed size as to overcome resizing problems*/
-  width: 500px;
-  margin: 20px auto;
+    /*using fixed size as to overcome resizing problems*/
+    width: 500px;
+    margin: 20px auto;
 }
-#todo-app .isHidden{
-  display: none;
+
+#todo-app .isHidden {
+    display: none;
 }
-#todo-app h3{
-  margin : 0;
-  text-align: center;
+
+#todo-app h3 {
+    margin: 0;
+    text-align: center;
 }
+
 #todo-app #todo-box {
-  border-bottom: 1px solid black;
-  list-style: none;
-  margin: 0;
-  padding: 0px 3px;
+    border-bottom: 1px solid black;
+    list-style: none;
+    margin: 0;
+    padding: 0px 3px;
 }
+
 #todo-app #todo-container #todo-box:first-child {
-  border-top: 1px solid black;
+    border-top: 1px solid black;
 }
-#todo-app .active {
-  border: 1px solid purple;
-  border-radius: 5px;
-}
+
 #todo-app .strikeout {
-  text-decoration: line-through;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  /* IE8 and earlier */
+    text-decoration: line-through;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    /* IE8 and earlier */
 }
+
+#select-all{
+    margin-left: 7px;
+}
+
 #todo-app li {
-  position: relative;
-  height: 1.5em;
-  font-size: 1.5em;
+    position: relative;
+    height: 1.5em;
+    font-size: 1.5em;
 }
+
 #todo-app .view .remove-todo-close {
-  display: none;
-  position: absolute;
-  right : 5px;
-  top: 0;
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
 }
+
 #todo-app .view:hover .remove-todo-close {
-  display: block;
+    display: block;
 }
+
 #todo-app #todo-box li .view {
-  display: inline-block;
-  width: 100%;
+    display: inline-block;
+    width: 100%;
 }
-#todo-app #todo-box li.editing .view {
-  display: none;
+
+
+#todo-app #todo-box .input-box {
+    width: 100%;
 }
-#todo-app #todo-box .edit {
-  display: none;
-  width : 100%;
-}
-#todo-app #todo-box li.editing .edit {
-  display: block;
-}
+
+
 /*as vertical align property does not inherit we need to add this property to all elements*/
-#todo-app #check-all, #todo-app .view .check-hasCompleted, #todo-app .view .remove-todo-close, #todo-app .view .todo-title {
-  vertical-align: middle;
+#todo-app #check-all, #todo-app .view * {
+    vertical-align: middle;
+    cursor: pointer;
 }
-#todo-app .view .todo-title, #todo-app #new-todo {
-  margin-left: 3%;
+
+#todo-app .view .todo-title {
+    margin-left: 17px;
 }
-#todo-app #new-todo, #todo-app .edit{
-  height : 40px;
-  font-size: 1.2em;
-  padding-left: 10px;
+
+#todo-app #new-todo, #todo-app .input-box {
+    height: 40px;
+    font-size: 1.2em;
+    padding-left: 10px;
+    outline: none;
 }
-#todo-app #new-todo{
-width: 92%;
+
+#todo-app #new-todo {
+    width: 92%;
+    margin-left : 15px;
 }
+
 #todo-app a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
-#todo-app #todo-form{
-  position: relative;
+
+#todo-app .todo-form {
+    margin-bottom: 10px;
 }
-#todo-app #statusbar{
-  margin-top:10px;
+
+#todo-app #statusbar {
+    margin-top: 10px;
 }
-/*to override user agent style sheet*/
-#todo-app form{
-  margin-bottom: 10px;
+#todofooter{
+    margin-left: 36px;
+    margin-top: 10px;
 }
